@@ -31,6 +31,8 @@ const connectDB = async () => {
   }
 };
 
+
+
 export default connectDB;
 🔹 models/notesModel.js
 Function: Defines schema for Notes.
@@ -40,6 +42,8 @@ const noteSchema = new mongoose.Schema({
   title: String,
   content: String,
 }, { timestamps: true });
+
+
 
 export default mongoose.model('Note', noteSchema);
 🔹 controllers/notesController.js
@@ -52,11 +56,21 @@ export const getAllNotes = async (req, res) => {
   res.status(200).json(notes);
 };
 
+
+
+
+
+
+
 export const createNote = async (req, res) => {
   const newNote = new Note(req.body);
   const saved = await newNote.save();
   res.status(201).json(saved);
 };
+
+
+
+
 🔹 routes/notesroute.js
 Function: Defines routes for note-related requests.
 
@@ -69,6 +83,10 @@ router.get('/', getAllNotes);
 router.post('/', createNote);
 
 export default router;
+
+
+
+
 🔹 src/server.js
 Function: Entry point of the backend. Configures app and starts server.
 
@@ -95,6 +113,12 @@ Function: Stores environment variables securely.
 
 MONGO_URI=your_mongodb_connection_string
 PORT=8000
+
+
+
+
+
+
 💡 Reflection
 By creating this project, I not only revised CRUD operations but also learned how to:
 
