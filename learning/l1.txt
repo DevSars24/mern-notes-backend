@@ -1,4 +1,7 @@
 ✍️ Project Summary: MERN Notes Backend
+
+
+
 📌 Purpose
 I built this backend project to revise and strengthen my understanding of CRUD operations (Create, Read, Update, Delete) using modern tools and best practices. This project allowed me to practically apply what I learned in Express.js, MongoDB, routing, middleware, and controller logic — helping me revise in a structured and meaningful way.
 
@@ -12,12 +15,10 @@ Clean project structure like industry-level backend projects
 Emphasized on code reusability, separation of concerns, and RESTful design
 
 📁 File/Folder Summary and Key Code Snippets
+
+
 🔹 config/db.js
 Function: Connects to MongoDB using Mongoose.
-
-js
-Copy
-Edit
 import mongoose from 'mongoose';
 
 const connectDB = async () => {
@@ -33,10 +34,6 @@ const connectDB = async () => {
 export default connectDB;
 🔹 models/notesModel.js
 Function: Defines schema for Notes.
-
-js
-Copy
-Edit
 import mongoose from 'mongoose';
 
 const noteSchema = new mongoose.Schema({
@@ -48,9 +45,6 @@ export default mongoose.model('Note', noteSchema);
 🔹 controllers/notesController.js
 Function: Handles logic for all note operations.
 
-js
-Copy
-Edit
 import Note from '../models/notesModel.js';
 
 export const getAllNotes = async (req, res) => {
@@ -66,9 +60,6 @@ export const createNote = async (req, res) => {
 🔹 routes/notesroute.js
 Function: Defines routes for note-related requests.
 
-js
-Copy
-Edit
 import express from 'express';
 import { getAllNotes, createNote } from '../controllers/notesController.js';
 
@@ -81,9 +72,6 @@ export default router;
 🔹 src/server.js
 Function: Entry point of the backend. Configures app and starts server.
 
-js
-Copy
-Edit
 import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
@@ -105,9 +93,6 @@ app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 🔹 .env
 Function: Stores environment variables securely.
 
-env
-Copy
-Edit
 MONGO_URI=your_mongodb_connection_string
 PORT=8000
 💡 Reflection
