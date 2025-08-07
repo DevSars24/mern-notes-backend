@@ -16,19 +16,7 @@ This is the **backend server** for the MERN Notes App built using **Node.js**, *
 ---
 
 ## 📁 Folder Structure
-backend/
-├── config/
-│ └── db.js # MongoDB connection
-├── controllers/
-│ └── notesController.js # Logic for handling note routes
-├── models/
-│ └── notesModel.js # Mongoose schema
-├── routes/
-│ └── notesroute.js # API endpoints
-├── src/
-│ └── server.js # Main server entry point
-├── .env # Environment variables
-├── package.json
+<pre lang="text"> ## 📁 Folder Structure ```bash backend/ ├── config/ │ └── db.js # MongoDB connection ├── controllers/ │ └── notesController.js # Logic for handling note routes ├── models/ │ └── notesModel.js # Mongoose schema ├── routes/ │ └── notesroute.js # API endpoints ├── src/ │ └── server.js # Main server entry point ├── .env # Environment variables ├── package.json └── README.md ``` </pre>son
 └── README.md
 
 
@@ -74,5 +62,6 @@ nodemon src/server.js
 Saurabh Singh Rajput
 2nd Year CSE @ IIIT Bhagalpur
 Self-taught MERN Developer | Passionate about real-life projects
+
 
 
